@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+header {
+    background-color: #000000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+header p {
+    margin: 5px 0 0;
+}
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color:#ffffff
+}
+.glass {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.014), rgba(0, 0, 0, 0.671));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.014);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+}
+section {
+    margin-bottom: 20px;
+}
+section h2 {
+    border-bottom: 2px solid #000000;
+    padding-bottom: 5px;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+ul li {
+    margin-bottom: 10px;
+}
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #777;
+}
+button {
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  text-decoration:solid;
+  display:inline-block ;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  
+ }
+ .center {
+  margin: 0;
+  position: absolute;
+  top: 106%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%)
+ }
+ .center::before{
+    content: "";
+    background: linear-gradient(
+        45deg,
+        #00ffff ,#ff66ff ,#66ff99 ,#ff3399 ,
+        #990099 ,#ff0000 ,#0033cc ,#ff6699 ,
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 1;
+ }
+ @keyframes glowing {
+    0% {background-position: 0 0;}
+    50% {background-position: 400% 0;}
+    100% {background-position: 0 0;}
+ }
+ .center:hover::before {
+    opacity: 1;
+ }
+ .center:active::after {
+    background: transparent;
+ }
+ .center:active {
+    color: #000000;
+    font-weight: bold;
+ }
+ footer {
+  margin-top: 75px;
+}
+img {
+  height: 250px;
+  width: 200px;
+  border-radius: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; 
+}
